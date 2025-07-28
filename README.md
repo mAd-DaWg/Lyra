@@ -255,7 +255,7 @@ All processing is local. No external API calls (except optional Hugging Face, to
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This project does not condone any illegal activities. Any and all miss-uses are at your own risk.
 
