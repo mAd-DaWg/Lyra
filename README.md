@@ -31,7 +31,7 @@ No cloud dependencies. No API keys. 100% local.
 ### Dependencies
 
 - Node.js 18+
-- Python 3.11 (sudo yay -S python311) [Installs alongside existing python]
+- Python 3.11 (yay -S python311) [Installs alongside existing python]
 - ollama
 - Valkey installed and running (Arch Linux: \`sudo pacman -S valkey && sudo systemctl enable valkey && sudo systemctl start valkey\`)  
 - npm to get project dependencies
