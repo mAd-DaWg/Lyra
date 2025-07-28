@@ -255,6 +255,10 @@ All processing is local. No external API calls (except optional Hugging Face, to
 
 ---
 
+## Disclaimer
+
+This project does not condone any illegal activities. Any and all miss-uses are at your own risk.
+
 ## 🧑‍💻 License
 
 MIT — free to use and modify.
