@@ -16,7 +16,7 @@ No cloud dependencies. No API keys. 100% local.
 
 ## ✨ Features
 
-- Upload multiple file types (PDF, DOCX, PPTX, MD) to build a persistent vector store
+- Upload multiple file types (PDF, EPUB, DOCX, PPTX, MD, TXT, HTML, JSON, CSV) to build a persistent vector store
 - Asynchronous background processing of uploads to split, embed, and save vectors
 - Fast, responsive /chat endpoint querying the built vector DB
 - Configurable chunk sizes and chunk overlaps
@@ -245,13 +245,13 @@ All processing is local. No external API calls (except optional Hugging Face, to
 
 ## 🧪 Roadmap Ideas
 
-- [ ] Add support for plain `.txt` or `.html`
+- [x] Add support for plain `.txt` or `.html`
+- [x] Streaming LLM responses (done)
 - [ ] Add multimodal support for images and etc
 - [ ] Add voice input functionality
 - [ ] Expose a `/clear` endpoint to reset ChromaDB
 - [ ] Add metadata tagging for document source
 - [ ] Agentic tool calling
-- [x] Streaming LLM responses (done)
 
 ---
 
