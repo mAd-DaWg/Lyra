@@ -1,0 +1,8 @@
+Flask
+ipython
+nltk
+numpy
+chromadb
+TTS
+pydub
+transformers==4.33.0

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Lyra</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="src/highlight.min.css">                <!-- syntax highlighting of code blocks https://github.com/highlightjs/highlight.js-->
+        <script type="text/javascript" src="src/highlight.min.js"></script> <!-- syntax highlighting of code blocks https://github.com/highlightjs/highlight.js-->
+        <script type="text/javascript" src="src/marked.umd.js"></script>    <!-- markdown parser https://github.com/markedjs/marked-->
+        <script type="text/javascript" src="src/purify.min.js"></script>    <!-- library used to sanitize HTML and prevent XSS. https://github.com/cure53/DOMPurify -->
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Lyra</h1>
+                <div id="selectContainer">
+                    <label for="modelSelector">Select model:</label>
+                    <select id="modelSelector" required>
+                        <option value="">Select a model</option>
+                    </select>
+
+                    <label for="voiceSelector">Select voice:</label>
+                    <select id="voiceSelector" required>
+                        <option value="">Select a voice</option>
+                    </select>
+                </div>
+            </header>
+            <div id="chatContainer">
+                <div id="chatMessages"></div>
+            </div>
+            <div id="inputContainer">
+                <textarea id="userInput" placeholder="Enter your message..."></textarea>
+                Use data store: <input type="checkbox" id="useRag" name="Use data store"/>
+                Do TTS: <input type="checkbox" id="useTTS" name="Use TTS" checked/> 
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label>
+                Select file to upload:
+                <input type="file" name="files" id="fileInput" multiple required />
+            </label>
+            <button type="submit">Upload File</button>
+            <div id="uploadStatus"></div>
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

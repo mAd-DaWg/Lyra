@@ -1,0 +1,41 @@
+{
+    "name": "lyra",
+    "version": "1.0.0",
+    "description": "A simple assitant using RAG, tts, and ollama",
+    "license": "MIT",
+    "author": "",
+    "type": "module",
+    "main": "index.js",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@chroma-core/default-embed": "^0.1.8",
+        "@langchain/community": "^0.3.49",
+        "@langchain/core": "^0.3.65",
+        "@langchain/langgraph": "^0.3.10",
+        "@langchain/ollama": "^0.2.3",
+        "axios": "^1.10.0",
+        "bullmq": "^5.56.4",
+        "chromadb": "^3.0.9",
+        "chromadb-default-embed": "^2.14.0",
+        "emoji-js": "^3.8.1",
+        "express": "^5.1.0",
+        "ioredis": "^5.6.1",
+        "langchain": "^0.3.29",
+        "mathjs": "^14.5.3",
+        "multer": "^2.0.1",
+        "nerdamer": "^1.1.13",
+        "officeparser": "^4.2.0",
+        "ollama": "^0.5.16",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}

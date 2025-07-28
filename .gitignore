@@ -1,0 +1,46 @@
+# Node.js dependencies
+node_modules/
+.venv
+.continue
+voices/*
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE/Editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Uploaded files
+data/
+
+# Chroma DB files (if any local files are stored here)
+chroma_db/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Build and dist folders
+build/
+dist/
+data/
+chroma/
+prompt_examples.js
+
+# npm package lock file (optional, if you don't want it to be versioned)
+package-lock.json
+
+# TypeScript compiled files
+*.tsbuildinfo
