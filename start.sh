@@ -16,8 +16,13 @@ if ! command -v tmux &> /dev/null; then
     echo "tmux could not be found, launching terminal windows instead."
 
     # Launch three separate terminal windows
-    echo "Launching nvtop in a new terminal..."
-    launch_terminal 'nvtop' &
+    # Check if nvtop exists before launching it
+    if command -v nvtop &> /dev/null; then
+        echo "Launching nvtop in a new terminal..."
+        launch_terminal 'nvtop' &
+    else
+        echo "nvtop not found. Skipping."
+    fi
 
     echo "Launching startBG.sh in a new terminal..."
     launch_terminal './startBG.sh' &
@@ -34,10 +39,16 @@ else
         tmux new-session -d -s $t_session_name
 
         # Do the split and start commands
-        echo "Starting 'nvtop'"
-        tmux send-keys -t $t_session_name 'nvtop' C-m
-        echo "Splitting tmux window into two vertical panes"
-        tmux split-window -t $t_session_name -hf
+        # Check if nvtop exists before launching it
+        if command -v nvtop &> /dev/null; then
+            echo "Starting 'nvtop'"
+            tmux send-keys -t $t_session_name 'nvtop' C-m
+            echo "Splitting tmux window into two vertical panes"
+            tmux split-window -t $t_session_name -hf
+        else
+            echo "nvtop not found. Skipping."
+        fi
+        
         echo "Starting 'startBG.sh' in right pane"
         tmux send-keys -t $t_session_name './runBG.sh' C-m
         echo "Splitting right pane again for two horizontal panes"
