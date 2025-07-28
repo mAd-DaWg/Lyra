@@ -1,4 +1,4 @@
-# 🧠 Local RAG API (LangChain + Ollama + ChromaDB)
+# 🧠 Local RAG Chat (LangChain + Ollama + ChromaDB)
 
 This project is a simple but powerful **REST API** and **Chat App** for doing **Retrieval-Augmented Generation (RAG)** and **Tool calling** locally. It uses:
 
@@ -15,11 +15,11 @@ No cloud dependencies. No API keys. 100% local.
 
 ## ✨ Features
 
-- Upload multiple file types (PDF, DOCX, PPTX, MD) to build a persistent vector store  
-- Asynchronous background processing of uploads to split, embed, and save vectors  
-- Fast, responsive /ask endpoint querying the built vector DB  
-- Configurable chunk sizes and chunk overlaps  
-- Use of Faiss vector store and HuggingFace transformer embeddings  
+- Upload multiple file types (PDF, DOCX, PPTX, MD) to build a persistent vector store
+- Asynchronous background processing of uploads to split, embed, and save vectors
+- Fast, responsive /chat endpoint querying the built vector DB
+- Configurable chunk sizes and chunk overlaps
+- Use of chromaDB vector store and `nomic-embed-text` embeddings via ollama
 - Valkey-based job queue for scaling uploads and encoding without blocking API
 
 ---
@@ -37,8 +37,8 @@ No cloud dependencies. No API keys. 100% local.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/local-rag-api.git
-cd lyra
+git clone https://github.com/mAd-DaWg/Lyra.git
+cd Lyra
 ```
 
 ### 2. Install dependencies
@@ -48,7 +48,7 @@ Simply running the project will install dependancies
 ### 3. Install Ollama and models
 
 Download and install Ollama:  
-👉 https://ollama.com
+👉 <https://ollama.com>
 
 Then pull the model like this:
 
@@ -188,7 +188,8 @@ All processing is local. No external API calls (except optional Hugging Face, to
 - [ ] Add support for plain `.txt` or `.html`
 - [ ] Expose a `/clear` endpoint to reset ChromaDB
 - [ ] Add metadata tagging for document source
-- [ ] Streaming LLM responses
+- [ ] Agentic tool calling
+- [x] Streaming LLM responses (done)
 
 ---
 
@@ -198,4 +199,4 @@ MIT — free to use and modify.
 
 ---
 
-Made with 🧠 + ☕ by [Your Name or Team]
+Made with 🧠 + ☕ by mAd-DaWg
